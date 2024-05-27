@@ -217,3 +217,33 @@ export const socialMedia = [
         img: "/link.svg",
     },
 ];
+
+export const techStacksRight = [
+    {
+        id: 1,
+        tech: "React.js"
+    },
+    {
+        id: 2,
+        tech: "Next.js"
+    },
+    {
+        id: 3,
+        tech: "Ruby"
+    },
+];
+
+export const techStacksLeft = [
+    {
+        id: 1,
+        tech: "Aceternity UI"
+    },
+    {
+        id: 2,
+        tech: "Prisma"
+    },
+    {
+        id: 3,
+        tech: "Shadcn"
+    },
+];
