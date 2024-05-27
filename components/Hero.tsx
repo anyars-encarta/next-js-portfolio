@@ -5,10 +5,10 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect'
 
 const Hero = () => {
 
-    const handleClick = () => {};
+    // const handleClick = () => {};
 
     return (
-        <div className='pb-20 pt-36'>
+        <div id='home' className='pb-20 pt-36'>
             <div>
                 <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white" />
                 <Spotlight className="top-10 left-full h-[80vh] w-[50vw]" fill="purple" />
@@ -40,7 +40,6 @@ const Hero = () => {
                             title='Show my work'
                             icon={<FaLocationArrow />}
                             position='right'
-                            handleClick={handleClick}
                             otherClasses=''
                         />
                     </a>
