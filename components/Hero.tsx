@@ -5,7 +5,7 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect'
 
 const Hero = () => {
 
-    const handleClick = () => {};
+    // const handleClick = () => {};
 
     return (
         <div id='home' className='pb-20 pt-36'>
@@ -40,7 +40,6 @@ const Hero = () => {
                             title='Show my work'
                             icon={<FaLocationArrow />}
                             position='right'
-                            handleClick={handleClick}
                             otherClasses=''
                         />
                     </a>
