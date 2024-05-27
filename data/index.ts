@@ -49,7 +49,6 @@ export const gridItems = [
         img: "/grid.svg",
         spareImg: "/b4.svg",
     },
-
     {
         id: 5,
         title: "Currently building a JS Animation library",
