@@ -2,6 +2,8 @@ import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { GlobeDemo } from "./GridGlobe";
 import { techStacksRight, techStacksLeft } from "@/data";
+import Lottie from "react-lottie";
+import { useState } from "react";
 
 export const BentoGrid = ({
     className,
@@ -41,6 +43,9 @@ export const BentoGridItem = ({
     titleClassName?: string;
     spareImg?: string;
 }) => {
+
+    const [copied, setCopied] = useState(false);
+
     return (
         <div
             className={cn(
@@ -126,7 +131,11 @@ export const BentoGridItem = ({
                     {id === 6 && (
                         <div className='mt-5 relative'>
                             <div className={`absolute -bottom-5 right-0`}>
-                                
+                                <Lottie options={{
+                                    loop: copied,
+                                    autoplay: copied,
+                                    animationData: animationData,
+                                }} />
                             </div>
                         </div>
                     )}
