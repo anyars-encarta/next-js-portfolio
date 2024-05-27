@@ -69,7 +69,7 @@ export const BentoGridItem = ({
             }}
         >
 
-            <div className={`${id === 6} && 'flex justify-center h-full absolute'`}>
+            <div className={`${id === 6 && 'flex justify-center'} h-full`}>
                 <div className='w-full h-full absolute'>
                     {img && (
                         <img
@@ -122,11 +122,11 @@ export const BentoGridItem = ({
                                     </span>
                                 ))}
 
-                                <span className='py-4 px-3 rounded-lg text-center bg-[#10132e]' />
+                                <span className='lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#10132e]' />
                             </div>
 
                             <div className='flex flex-col gap-3 md:gap-3 lg:gap-8'>
-                                <span className='py-4 px-3 rounded-lg text-center bg-[#10132e]' />
+                                <span className='lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#10132e]' />
                                 {techStacksLeft.map((stack) => (
                                     <span
                                         key={stack.id}
