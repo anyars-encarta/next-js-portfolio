@@ -4,9 +4,6 @@ import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 
 const Hero = () => {
-
-    // const handleClick = () => {};
-
     return (
         <div id='home' className='pb-20 pt-36'>
             <div>
@@ -32,10 +29,10 @@ const Hero = () => {
                     />
 
                     <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
-                        Hi, I&apos;m Anyars, a Full-stack Developer based in Ghana, West Africa.
+                        Hi, I&apos;m <span className='text-purple'>Anyars</span>, a <span className='text-purple'>Full-stack Developer</span> based in Ghana, West Africa.
                     </p>
 
-                    <a href="#about">
+                    <a href="#projects">
                         <MagicButton
                             title='Show my work'
                             icon={<FaLocationArrow />}
