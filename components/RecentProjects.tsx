@@ -7,7 +7,7 @@ const RecentProjects = () => {
     return (
         <div id='projects' className='py-20'>
             <h1 className='heading'>
-                A small selection of {' '}
+                A small selection of my {' '}
                 <span className='text-purple'>recent projects</span>
             </h1>
             <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10'>
@@ -36,15 +36,20 @@ const RecentProjects = () => {
                                     <div className='flex items-center'>
                                         {iconLists.map((icon, i) => (
                                             <div
-                                                key={icon}
-                                                className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex items-center justify-center'
+                                                key={i}
+                                                className='relative group'
                                                 style={{ transform: `translateX(-${5 * i * 2}px)` }}
                                             >
-                                                <img
-                                                    src={icon}
-                                                    alt={icon}
-                                                    className='p-2'
-                                                />
+                                                <div className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex items-center justify-center'>
+                                                    <img
+                                                        src={icon.img}
+                                                        alt={icon.label}
+                                                        className='p-2'
+                                                    />
+                                                </div>
+                                                {/* <span className='absolute hidden group-hover:block bg-white text-black rounded p-1'>
+                                                    {icon.label}
+                                                </span> */}
                                             </div>
                                         ))}
                                     </div>
