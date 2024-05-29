@@ -1,4 +1,5 @@
 import ClientsTestimonials from "@/components/ClientsTestimonials";
+import Experiences from "@/components/Experiences";
 import GridAbout from "@/components/GridAbout";
 import Hero from "@/components/Hero";
 import RecentProjects from "@/components/RecentProjects";
@@ -14,6 +15,7 @@ export default function Home() {
         <GridAbout />
         <RecentProjects />
         <ClientsTestimonials />
+        <Experiences />
       </div>
     </main>
   );
