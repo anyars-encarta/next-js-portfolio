@@ -296,21 +296,6 @@ export const workExperience = [
     },
 ];
 
-export const socialMedia = [
-    {
-        id: 1,
-        img: "/git.svg",
-    },
-    {
-        id: 2,
-        img: "/twit.svg",
-    },
-    {
-        id: 3,
-        img: "/link.svg",
-    },
-];
-
 export const techStacksRight = [
     {
         id: 1,
@@ -338,5 +323,24 @@ export const techStacksLeft = [
     {
         id: 3,
         tech: "Shadcn"
+    },
+];
+
+export const socialMedia = [
+    {
+        id: 1,
+        img: "/git.svg",
+        link: "",
+    },
+    {
+        id: 2,
+        img: "/twit.svg",
+        link: "",
+
+    },
+    {
+        id: 3,
+        img: "/link.svg",
+        link: "",
     },
 ];
