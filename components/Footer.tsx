@@ -1,6 +1,14 @@
 import React from 'react'
+import MagicButton from './ui/MagicButton'
+import { FaLocationArrow } from 'react-icons/fa6';
 
 const Footer = () => {
+    const handleCopy = () => {
+        navigator.clipboard.writeText('anyarsencarta@gmail.com');
+
+        setCopied(true);
+    };
+
     return (
         <footer id='contact' className='w-full pt-20 pb-10'>
             <div className='w-full absolute left-0 -bottom-72 min-h-96'>
@@ -14,6 +22,14 @@ const Footer = () => {
                 <p className='text-white-200 md:mt-10 my-5 text-center'>
                     Reach out to me today and let&apos;s discuss how I can help you achieve your goals.
                 </p>
+
+                <a href="mailto:anyarsencarta@gmail.com">
+                    <MagicButton
+                        title='Let&apos;s get in touch'
+                        icon={<FaLocationArrow />}
+                        position='right'
+                    />
+                </a>
             </div>
         </footer>
     )
