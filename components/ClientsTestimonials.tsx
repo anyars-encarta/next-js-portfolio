@@ -16,7 +16,7 @@ const ClientsTestimonials = () => {
           speed="slow"
         />
 
-        <div className='flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10'>
+        <div className='flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10 mt-8'>
           {companies.map((company) => (
             <div
               key={company.id}
