@@ -2,7 +2,6 @@ import { FaLocationArrow } from 'react-icons/fa6'
 import MagicButton from './ui/MagicButton'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
-// import { motion } from 'framer-motion'
 
 const Hero = () => {
     return (
@@ -22,16 +21,7 @@ const Hero = () => {
                 <div className='hidden lg:block'>
                     <img src='/hero.png' alt='hero' />
                 </div>
-                {/* <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.5, type: 'tween' }}
-                    className='hidden lg:block'
-                >
-                    <img src='/hero.png' alt='hero' />
-                </motion.div> */}
-
+                
                 <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
                     <h2 className='uppercase tracking-widest text-xs text-center text-blue-100 max-w-80'>
                         Dynamic Web Magic with Next.js
