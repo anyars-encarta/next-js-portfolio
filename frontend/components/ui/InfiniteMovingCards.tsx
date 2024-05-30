@@ -2,6 +2,7 @@
 
 import { cn } from "@/utils/cn";
 import React, { useEffect, useState } from "react";
+import { urlFor, client } from '../../client';
 
 export const InfiniteMovingCards = ({
   items,
@@ -11,10 +12,10 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
-    quote: string;
     name: string;
-    title: string;
-    img: string;
+    company: string;
+    imageurl: string;
+    feedback: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -102,13 +103,13 @@ export const InfiniteMovingCards = ({
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
               <span className=" relative z-20 text-sm md:text-lg leading-[1.6] text-white font-normal">
-                {item.quote}
+                {item.feedback}
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex gap-1 items-center justify-center">
                   <div className='me-3'>
                     <img
-                      src={item.img || 'https://www.slotcharter.net/wp-content/uploads/2020/02/no-avatar.png'}
+                      src={urlFor(item.imageurl) || 'https://www.slotcharter.net/wp-content/uploads/2020/02/no-avatar.png'}
                       alt={item.name}
                       className='w-20 h-20 object-cover rounded-full' />
                   </div>
@@ -117,7 +118,7 @@ export const InfiniteMovingCards = ({
                       {item.name}
                     </span>
                     <span className=" text-sm leading-[1.6] text-white-200 font-normal">
-                      {item.title}
+                      {item.company}
                     </span>
                   </div>
                 </span>

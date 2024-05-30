@@ -1,8 +1,22 @@
+'use client'
+
 import React, { useEffect, useState } from "react";
 import { InfiniteMovingCards } from "./ui/InfiniteMovingCards";
 import { companies, testimonials } from '../data/index';
+import { urlFor, client } from '../client';
 
 const ClientsTestimonials = () => {
+  const [testimonials, setTestimonials] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "testimonials"]';
+
+    client.fetch(query)
+      .then((data) => {
+        setTestimonials(data);
+      });
+  }, []);
+
   return (
     <div id='testimonials' className='py-20'>
       <h1 className='heading'>
