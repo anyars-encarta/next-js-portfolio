@@ -1,13 +1,23 @@
 import { createClient } from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
 
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+const dataset = 'production';
+const apiVersion = '2022-02-01';
+const useCdn = true;
+const token = process.env.NEXT_PUBLIC_SANITY_TOKEN;
+
+if (!projectId || !token) {
+    throw new Error('Missing required environment variables');
+}
+
 export const client = createClient({
-    projectId: process.env.REACT_APP_SANITY_PROJECT_ID,
-    dataset: 'production',
-    apiVersion: '2022-02-01',
-    useCdn: true,
-    token: process.env.REACT_APP_SANITY_TOKEN,
-})
+    projectId,
+    dataset,
+    apiVersion,
+    useCdn,
+    token,
+});
 
 const builder = imageUrlBuilder(client);
 

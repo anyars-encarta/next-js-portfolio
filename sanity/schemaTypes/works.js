@@ -32,7 +32,6 @@ export default {
         hotspot: true,
       },
     },
-
     {
       name: 'tags',
       title: 'Tags',
@@ -46,5 +45,32 @@ export default {
       ]
     },
 
+    {
+      name: 'icons',
+      title: 'Icons',
+      type: 'array',
+      of: [
+        {
+          name: 'stackIcons',
+          title: 'Stack Icons',
+          type: 'object',
+          fields: [
+            {
+              name: 'stack',
+              title: 'Stack',
+              type: 'string',
+            },
+            {
+              name: 'img',
+              title: 'Img',
+              type: 'image',
+              options: {
+                hotspot: true,
+              },
+            },
+          ],
+        }
+      ]
+    },
   ],
 };
