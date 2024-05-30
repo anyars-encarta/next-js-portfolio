@@ -19,7 +19,7 @@ const Hero = () => {
 
             <div className='flex justify-center relative my-20 z-10'>
                 <div className='hidden lg:block'>
-                    <img src='/hero.png' alt='hero' />
+                    <img src='/hero.png' alt='hero' width={400} height={800}/>
                 </div>
                 
                 <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
