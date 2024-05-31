@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { PinContainer } from "./ui/3d-pin";
 import { FaGithub, FaLocationArrow } from "react-icons/fa6";
 import { urlFor, client } from '../client';
+import Loading from "./Loading";
 
 const RecentProjects = () => {
     const [projects, setProjects] = useState([]);
@@ -27,7 +28,7 @@ const RecentProjects = () => {
                 <span className='text-purple'>recent projects</span>
             </h1>
             {loading ? (
-                <div>Loading projects...</div>
+                <Loading type='projects' />
             ) : (
                 <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10'>
                     {projects.map((project) => (
