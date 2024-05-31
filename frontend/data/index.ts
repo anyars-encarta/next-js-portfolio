@@ -328,17 +328,37 @@ export const socialMedia = [
     {
         id: 1,
         img: "/git.svg",
-        link: "",
+        link: "https://github.com/anyars-encarta",
     },
     {
         id: 2,
         img: "/twit.svg",
-        link: "",
+        link: "https://twitter.com/anyarsencarta",
 
     },
     {
         id: 3,
         img: "/link.svg",
-        link: "",
+        link: "https://www.linkedin.com/in/anyars-yussif/",
+    },
+    {
+        id: 4,
+        img: "/medium.svg",
+        link: "https://medium.com/@anyarsencarta",
+    },
+    {
+        id: 5,
+        img: "/facebook.svg",
+        link: "https://web.facebook.com/encartadegreat/",
+    },
+    {
+        id: 6,
+        img: "/insta.svg",
+        link: "https://www.instagram.com/anyarsyussif/",
+    },
+    {
+        id: 7,
+        img: "/youtube.svg",
+        link: "https://www.youtube.com/@anyarsencarta",
     },
 ];
