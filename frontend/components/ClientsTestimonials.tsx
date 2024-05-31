@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import { InfiniteMovingCards } from "./ui/InfiniteMovingCards";
-import { companies } from '../data/index';
 import { urlFor, client } from '../client';
 import Loading from "./Loading";
 
@@ -52,13 +51,13 @@ const ClientsTestimonials = () => {
                 className='flex md:max-w-60 max-w-32 gap-2'
               >
                 <img
-                  src={urlFor(brand.imgUrl)}
+                  src={urlFor(brand.imgUrl).toString()}
                   alt={brand.name}
                   className='md:w-10 w-5'
                 />
 
                 <img
-                  src={urlFor(brand.nameImgUrl) || ''}
+                  src={urlFor(brand.nameImgUrl).toString() || ''}
                   alt={brand.name}
                   className='md:w-24 w-20'
                 />
