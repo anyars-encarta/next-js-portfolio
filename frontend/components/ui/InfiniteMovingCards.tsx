@@ -109,7 +109,7 @@ export const InfiniteMovingCards = ({
                 <span className="flex gap-1 items-center justify-center">
                   <div className='me-3'>
                     <img
-                      src={urlFor(item.imageurl) || 'https://www.slotcharter.net/wp-content/uploads/2020/02/no-avatar.png'}
+                      src={urlFor(item.imageurl).toString() || 'https://www.slotcharter.net/wp-content/uploads/2020/02/no-avatar.png'}
                       alt={item.name}
                       className='w-20 h-20 object-cover rounded-full' />
                   </div>
