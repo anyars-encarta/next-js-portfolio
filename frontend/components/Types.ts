@@ -24,9 +24,5 @@ export interface Work {
 };
 
 export interface Experience {
-    // _id: string;
-    // name: string;
-    // company: string;
-    // desc: string;
     works: Work[];
 };
