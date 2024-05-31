@@ -8,15 +8,22 @@ import Loading from "./Loading";
 
 const ClientsTestimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
+  const [brands, setBrands] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
     const query = '*[_type == "testimonials"]';
+    const queryBrands = '*[_type == "brands"]';
 
     client.fetch(query)
       .then((data) => {
         setTestimonials(data);
+      });
+
+      client.fetch(queryBrands)
+      .then((data) => {
+        setBrands(data);
         setLoading(false);
       });
   }, []);
@@ -39,20 +46,20 @@ const ClientsTestimonials = () => {
           />
 
           <div className='flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10 mt-8'>
-            {companies.map((company) => (
+            {brands.map((brand) => (
               <div
-                key={company.id}
+                key={brand._id}
                 className='flex md:max-w-60 max-w-32 gap-2'
               >
                 <img
-                  src={company.img}
-                  alt={company.name}
+                  src={urlFor(brand.imgUrl)}
+                  alt={brand.name}
                   className='md:w-10 w-5'
                 />
 
                 <img
-                  src={company.nameImg}
-                  alt={company.name}
+                  src={urlFor(brand.nameImgUrl) || ''}
+                  alt={brand.name}
                   className='md:w-24 w-20'
                 />
               </div>
