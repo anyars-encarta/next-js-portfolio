@@ -17,6 +17,14 @@ export default {
             name: 'desc',
             title: 'Desc',
             type: 'string'
+        },
+        {
+            name: 'thumbnail',
+            title: 'Thumbnail',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
         }
     ]
 }
