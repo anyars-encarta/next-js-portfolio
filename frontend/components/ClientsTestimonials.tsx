@@ -4,10 +4,11 @@ import React, { useEffect, useState } from "react";
 import { InfiniteMovingCards } from "./ui/InfiniteMovingCards";
 import { urlFor, client } from '../client';
 import Loading from "./Loading";
+import { Brand } from './Types';
 
 const ClientsTestimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
-  const [brands, setBrands] = useState([]);
+  const [brands, setBrands] = useState<Brand[]>([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -21,7 +22,7 @@ const ClientsTestimonials = () => {
       });
 
       client.fetch(queryBrands)
-      .then((data) => {
+      .then((data: Brand[]) => {
         setBrands(data);
         setLoading(false);
       });

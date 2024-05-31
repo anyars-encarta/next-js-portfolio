@@ -5,9 +5,10 @@ import { PinContainer } from "./ui/3d-pin";
 import { FaGithub, FaLocationArrow } from "react-icons/fa6";
 import { urlFor, client } from '../client';
 import Loading from "./Loading";
+import { Project } from './Types';
 
 const RecentProjects = () => {
-    const [projects, setProjects] = useState([]);
+    const [projects, setProjects] = useState<Project[]>([]);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
@@ -15,7 +16,7 @@ const RecentProjects = () => {
         const query = '*[_type == "works"]';
 
         client.fetch(query)
-            .then((data) => {
+            .then((data: Project[]) => {
                 setProjects(data);
                 setLoading(false);
             });
