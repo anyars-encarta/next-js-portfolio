@@ -41,7 +41,7 @@ const RecentProjects = () => {
                                             <img src='/bg.png' alt='bg-img' />
                                         </div>
                                         <img
-                                            src={urlFor(project.imgUrl)}
+                                            src={urlFor(project.imgUrl).toString()}
                                             alt={project.title}
                                             className='z-10 absolute bottom-0'
                                         />
@@ -62,7 +62,7 @@ const RecentProjects = () => {
                                                 >
                                                     <div className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex items-center justify-center'>
                                                         <img
-                                                            src={urlFor(icon.img) || ''}
+                                                            src={urlFor(icon.img).toString() || ''}
                                                             alt={icon.stack || ''}
                                                             className='p-2'
                                                         />
